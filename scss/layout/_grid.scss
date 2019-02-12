@@ -1,0 +1,8 @@
+/* -------------------------------*\
+|              GRID                 |
+\*---------------------------------*/
+
+body{
+    background-color: $color-background;
+    margin:map-get($map: $margin, $key: nothing);
+}

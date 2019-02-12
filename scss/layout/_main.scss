@@ -1,0 +1,69 @@
+.main{
+    font-family: $base-font;
+    & .title-main{
+        color:$color-title;
+        text-align: center;
+        font-size: $title-font-size;
+    }
+    & section{
+     padding:map-get($map: $padding, $key: normal);
+    //  text-align: center;  
+    }
+    & article{
+        font-size: $base-font-size;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        text-align: center;
+        & figure{
+            & img{
+                width: 85%;
+            }
+            max-width: 80%;
+            & figcaption{
+                font-weight: 700;
+            }
+        }
+    }
+    & article:nth-of-type(odd){
+        & .subtitle{
+            color:$color-title-article;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-article-background-titulo;
+        }
+    }
+    & article:nth-of-type(even){
+        & .subtitle{
+            color:$color-title-article;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-article-background-titulo;
+        }
+    }
+}
+%contenido{
+    color:$color-text-article;
+    background-color: $color-article-background;
+    padding:map-get($map: $padding, $key:normal);
+}
+.variable-contenido,.for-each-content,.directiva-content,.funciones-content,.anidacion-contenido{
+    @extend %contenido ;
+}
+
+.estilos-content,{
+    @extend %contenido;
+    grid-column: 1/2;
+    grid-row: 1;
+}
+.mixins-content{
+    @extend .estilos-content;
+}
+.extend-content{
+    @extend .estilos-content;
+}
+.directiva-each-content{
+    @extend .estilos-content;
+}

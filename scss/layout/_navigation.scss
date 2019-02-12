@@ -1,0 +1,28 @@
+.nav{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    background-color: $color-nav;
+    position: fixed;
+    top:0;
+    z-index: 10;
+    & .logo{
+        justify-self: center;
+        align-self: center;
+        font-size:$base-font-size;
+        font-family: $title-font;
+        color:$color-title;
+        }   
+}
+.nav-content{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    & a{
+        text-decoration: none;
+        color:$color-links;
+    }
+    & li{
+        padding: map-get($map: $padding, $key: small);
+    }
+}
