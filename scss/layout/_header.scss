@@ -1,0 +1,10 @@
+/* -------------------------------*\
+|              HEADER               |
+\*---------------------------------*/
+
+
+.header{
+    grid-area:header;
+    display: grid;
+    grid-template-rows:  100vh auto;
+}

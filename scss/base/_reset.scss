@@ -1,3 +1,11 @@
-h2{
-    margin:map-get($map: $margin, $key: small)
+body{
+    margin:map-get($map: $margin, $key: nothing );
+}
+h3{
+    text-align: center;
+    font-size:map-get($map: $font-size, $key: x-lg);
+    font-weight: bold;
+}
+img{
+    max-width: 100%;
 }

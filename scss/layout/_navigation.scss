@@ -1,28 +1,33 @@
+/* -------------------------------*\
+|              NAV                  |
+\*---------------------------------*/
+
 .nav{
-    width: 100%;
     display: grid;
-    grid-template-columns: 2fr 7fr;
-    background-color: $color-nav;
+    grid-template-columns: 3fr 6fr ;
+    grid-auto-rows:70px;
+    background:transparent;
+    align-items: center;
+    background-color:$color-nav;
     position: fixed;
+    width:100%;
     top:0;
-    z-index: 10;
-    & .logo{
-        justify-self: center;
-        align-self: center;
-        font-size:$base-font-size;
-        font-family: $title-font;
-        color:$color-title;
-        }   
+    z-index: 2;
 }
-.nav-content{
+.logo{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: center;
+    height: 60px;
+}
+.features-item{
+    display: flex;
+    justify-content: space-evenly;
     list-style: none;
+    padding: 0;
     & a{
+        color:$color-text-nav;
         text-decoration: none;
-        color:$color-links;
     }
-    & li{
-        padding: map-get($map: $padding, $key: small);
-    }
+    
 }

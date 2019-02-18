@@ -1,15 +1,24 @@
 $padding:(
-    extra-big:25px,
-    big:20px,
-    normal:10px,
-    small:5px,
-    x-small:2px,
+    x-lg:25px,
+    lg:20px,
+    md:10px,
+    sm:5px,
+    xs:2px,
     nothing:0,
 );
 $margin:(
-    big:20px,
-    normal:10px,
-    small:5px,
-    x-small:2px,
+    x-lg:25px,
+    lg:20px,
+    md:10px,
+    sm:5px,
+    xs:2px,
     nothing:0,
-)
+);
+$font-size:(
+    x-lg:32px,
+    lg:24px,
+    md:18px,
+    sm:14px,
+    xs:8px,
+    nothing:0,
+);

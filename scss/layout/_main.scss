@@ -1,69 +1,68 @@
 .main{
-    font-family: $base-font;
-    & .title-main{
-        color:$color-title;
-        text-align: center;
-        font-size: $title-font-size;
-    }
-    & section{
-     padding:map-get($map: $padding, $key: normal);
-    //  text-align: center;  
-    }
-    & article{
-        font-size: $base-font-size;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-content: space-between;
-        text-align: center;
-        & figure{
-            & img{
-                width: 85%;
-            }
-            max-width: 80%;
-            & figcaption{
-                font-weight: 700;
-            }
-        }
-    }
-    & article:nth-of-type(odd){
-        & .subtitle{
-            color:$color-title-article;
-            display: flex;
+    grid-area: main;
+    background-color: $color-nav;
+    color:$color-text;
+    & .nosotros{
+        
+        & .presentacion-nosotros{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: map-get($map: $margin, $key: lg);
             justify-content: center;
             align-items: center;
-            background-color: $color-article-background-titulo;
+
+            & .resumen-nosotros{
+                font-size: map-get($map: $font-size, $key: md);
+                padding: map-get($map: $padding, $key: lg);
+                text-align: justify;
+            }
         }
-    }
-    & article:nth-of-type(even){
-        & .subtitle{
-            color:$color-title-article;
-            display: flex;
-            justify-content: center;
+        & .detalles-nosotros{
+            display:flex;
+            justify-content: space-evenly;
             align-items: center;
-            background-color: $color-article-background-titulo;
+            flex-flow: wrap row;
+            & div{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 150px;
+                width:25%;
+                padding: map-get($map: $padding, $key: lg);
+                margin: map-get($map: $margin, $key: lg);
+                & h4{
+                    margin:map-get($map: $margin, $key: nothing);
+                    display: none;
+                    bottom: 50%;
+                }
+            }
+            %img-nosotros{
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            & div:nth-of-type(1){
+                background-image:url(../images/nosotros/mision.svg);
+                @extend %img-nosotros;
+            }
+            div:nth-of-type(2){
+                background-image:url(../images/nosotros/vision.svg);
+                @extend %img-nosotros;
+            }
+            div:nth-of-type(3){
+                background-image:url(../images/nosotros/valores.svg);
+                @extend %img-nosotros;
+            }
+            div:nth-of-type(4){
+                background-image:url(../images/nosotros/objetivos.svg);
+                @extend %img-nosotros;
+            }
+            div:nth-of-type(5){
+                background-image:url(../images/nosotros/politicas.svg);
+                @extend %img-nosotros;
+            }
         }
+            
     }
-}
-%contenido{
-    color:$color-text-article;
-    background-color: $color-article-background;
-    padding:map-get($map: $padding, $key:normal);
-}
-.variable-contenido,.for-each-content,.directiva-content,.funciones-content,.anidacion-contenido{
-    @extend %contenido ;
 }
 
-.estilos-content,{
-    @extend %contenido;
-    grid-column: 1/2;
-    grid-row: 1;
-}
-.mixins-content{
-    @extend .estilos-content;
-}
-.extend-content{
-    @extend .estilos-content;
-}
-.directiva-each-content{
-    @extend .estilos-content;
-}

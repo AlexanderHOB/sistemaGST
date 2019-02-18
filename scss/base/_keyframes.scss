@@ -1,0 +1,32 @@
+@keyframes zoom {
+    // from{
+    //     background-size: 200%;
+    //     background-position: center;
+    //   }
+    //   20%{
+    //     background-position: right top;
+    //   }
+    //   40%{
+    //     background-size: 100%;
+    //     background-position: center;
+    //   }
+    //   60%{
+    //     background-position: left top;
+    //   }
+    //   80%{
+    //     background-position: left -100px;
+    //   }
+    //   to{
+    //     background-position: right -100px;
+    //     background-size: 200%;
+    //   }
+    from{
+        transform:scale(1) ; 
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1);
+    }
+}

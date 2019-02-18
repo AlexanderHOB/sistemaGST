@@ -1,7 +1,60 @@
+/* -------------------------------*\
+|             PORTADA                  |
+\*---------------------------------*/
 .portada{
-   & img{
-       width: 100%;
-       justify-self:center;
+    overflow: hidden;
+    position: relative;
+    & img{
+        max-width: 100%;
+        animation: zoom 30s ease alternate infinite;
+    }
+    & ul{
+        list-style: none;
+        margin:0 0 40px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        & li{
+            margin:0 0 40px;
+            & .slide{
+                position: absolute;
+                top:0;
+                left: 0;
+                transition: transform .5s;
+                transform: rotateY(90deg);
+                transform-origin: left;
+            }
+            & .radio{
+                position: relative;
+                z-index: 1;
+                height: 20px;
+                width: 20px;
+                cursor: pointer;
+                border-radius: 100%;
+                // box-shadow: 0 0 0 3px $color-radio;
+                transition: all .15s ease;
+            }
+            & .radio:before{
+                content:'';
+                position: absolute;
+                top:0;left:0; right:0; bottom:0;
+                border-radius: 100%;
+                background: $color-radio;
+                opacity: 1;
+            }
+            & .radio:checked{
+                height: 30px; width: 30px;
+            }
+            & .radio:checked ~ .slide{
+                transition: transform .5s;
+                transform:rotateY(0deg);
+                transform-origin: right;
+            }
+        }
 
-   }
+    }
+   
 }
