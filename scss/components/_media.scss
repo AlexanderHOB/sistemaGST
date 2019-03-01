@@ -1,0 +1,604 @@
+@include media (xs){
+
+    /*mision - vision*/
+    body{
+		font-size: 10px;
+	}
+	/*nav*/
+	#nav ul{
+		display: none;
+	}
+	.menu-toggle i{
+		display: block;
+	}
+	/*mv*/
+	.nosotros .misionVision .container{
+		grid-template: repeat(5, auto) / repeat(2, auto);
+		grid-template-areas: "mision mision" "vision vision" "valores valores" "objetivos objetivos" "politicas politicas";
+	}
+	.nosotros .misionVision .cardMV{
+		width: 270px;
+		height: 270px;
+	}
+	.nosotros .misionVision .cardMV .contents{
+		font-size: 13.5px;
+		height: calc(100% - 130px);
+	}
+	/*rombo*/
+	.nosotros .elegirnos .rombo *{
+		border-radius: 10px; 
+	}
+	.nosotros .elegirnos .box{
+		grid-gap: 5px;
+	}
+	.nosotros .elegirnos .line1, .nosotros .elegirnos .line2{
+		width: 0;
+		height: 0;
+	}
+	.nosotros .elegirnos .box{
+		width: 200px;
+		height: 200px;
+	}
+	.nosotros .elegirnos .text{
+		font-size: 11px;
+	}
+    /*servicios*/
+    .servicios{
+        height: 130vh;
+    }
+    .serviciosl{
+        display: grid;
+        grid-template-columns: 70% ;
+        grid-auto-rows: 200px;
+        justify-content: center;
+        position: relative;
+        width:100%;
+        height: 700px;
+    }
+    %servicio{
+        display:grid;
+        align-items: center;
+        justify-content: center;
+        transition: all 1s ease; 
+        height:200px;
+        
+
+    }
+    .servicio-g{
+        grid-template-columns: 1fr;
+        & div{
+            display: flex;
+            justify-content: center;
+        }
+        & h4{
+            text-align: center;
+            margin: 0;
+            line-height: 120px;
+            left:0;
+            position: relative;
+        }
+    }
+    .servicio-s{
+        grid-template-columns: 1fr;
+        
+        & h4{
+            margin: 0;
+            text-align: center;
+            line-height: 200px;
+            grid-row:1;
+
+        }
+    }
+    .servicio-t{
+        grid-template-columns: 1fr;
+        & h4{
+            text-align: center;
+            margin: 0;
+            line-height: 150px;
+            right:0;
+            position: relative;
+            grid-row:1;
+        }
+    }
+    %flecha{
+        span{
+            width: 10px;
+            height: 10px;
+        }
+    }
+    .flecha{
+        bottom:-5%;
+        left: 50%;
+        transform:rotate(0deg);
+
+        span:nth-of-type(2){
+            display: none;
+        }
+        &.rotate{
+            transform: rotate(-180deg) translateY(+40px);
+        }
+    }
+    .flecha-s{
+        bottom:-5%;
+        right: 50%;
+        transform:rotate(0deg);
+        &.rotate{
+            transform: rotate(-180deg) translateY(+40px);
+        }
+    }
+    .flecha-t{
+        left: 50%;
+        transform:rotate(180deg);
+        top:-5%;
+
+    }
+    .features-g{
+        display: flex;
+        flex-flow:wrap column;
+        font-size:.3em;
+        & div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        & img{
+            max-width: 40%;
+            max-height: 30%;
+        }
+        
+    }
+    .features-s{
+        font-size:.3em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        & img{
+            width: 30%;
+            height: 30%;
+        }
+    }
+    .features-t{
+        display: flex;
+        flex-flow:wrap column;
+        font-size:.3em;
+        & div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        & img{
+            max-width: 40%;
+            max-height: 30%;
+        }
+    }
+    @keyframes animate{
+        0%{
+            opacity: 0;
+            transform: rotate(45deg) translate(-10px, -10px);
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+    }
+    @keyframes feature-g-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-g;
+            height: 200px;
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-g;
+            height:600px;
+        }
+    }
+    @keyframes feature-g-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-g;
+            height:600px;
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-g;
+            height: 200px;
+        }
+    }
+    @keyframes feature-s-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-s;
+            height: 200px;
+            
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-s;
+            height: 600px;
+            transform: translateY(-200px);
+        }
+    }
+    @keyframes feature-s-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-s;
+            height: 600px;
+            transform: translateY(-200px);
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-s;
+            height: 200px;
+        }
+    }
+    @keyframes feature-t-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-t;
+            height: 200px;
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-t;
+            height: 600px;
+            transform: translateY(-400px);
+    
+        }
+    }
+    @keyframes feature-t-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-t;
+            height: 600px;
+            transform: translateY(-400px);
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-t;
+            height: 200px;
+        }
+    }
+    .contactanos .container{
+	
+        grid-template: auto auto / auto;
+        justify-items: center;
+    }
+    .contactanos .map, .contactanos .form{
+        width: 280px;
+        height: 500px;
+        margin: 25px 0 50px;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, .5);
+    }
+    footer{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .copywrite{
+        grid-column: span 1;
+    }
+    .footer-general{
+        padding-top: 0;
+    }
+}
+@include media(sm){
+    /*general*/
+	body{
+		font-size: 16px;
+    }
+    .menu-toggle i{
+        display: none;
+    }
+	/*mv*/
+	.nosotros .misionVision .cardMV{
+		width: 370px;
+		height: 270px;
+    }
+    .nosotros .misionVision .container{
+		grid-template: repeat(5, auto) / repeat(2, auto);
+		grid-template-areas: "mision mision" "vision vision" "valores valores" "objetivos objetivos" "politicas politicas";
+	}
+	.nosotros .misionVision .cardMV .contents{
+		font-size: 16px;
+		height: calc(100% - 130px);
+	}
+	/*rombo*/
+	.nosotros .elegirnos .box{
+		width: 300px;
+		height: 300px;
+	}
+	.nosotros .elegirnos .text{
+		font-size: 12px;
+	}
+    @keyframes feature-g-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-g;
+            width:200px;
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-g;
+            width:600px;
+        }
+    }
+    @keyframes feature-g-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-g;
+            width:600px;
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-g;
+            width:200px;
+        }
+    }
+    @keyframes feature-s-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-s;
+            width:200px;
+            
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-s;
+            width:600px;
+            transform: translateX(-200px);
+        }
+    }
+    @keyframes feature-s-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-s;
+            width:600px;
+            transform: translateX(-200px);
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-s;
+            width:200px;
+        }
+    }
+    @keyframes feature-t-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-t;
+            width:200px;
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-t;
+            width:600px;
+            transform: translateX(-400px);
+    
+        }
+    }
+    @keyframes feature-t-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-t;
+            width:600px;
+            transform: translateX(-400px);
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-t;
+            width:200px;
+        }
+    }
+
+    .serviciosl{
+        grid-template-columns: repeat(3,200px) !important ;
+
+    }
+    .servicio-title{
+        width:600px ;
+    }
+    .servicio-g{
+        & h4{
+            left:80px ;
+        }
+    }
+    .servicio-t{
+        & h4{
+            right:80px ;
+        }
+    }
+/*CONTACTOS*/
+    .contactanos .container{
+        
+        grid-template: auto auto / auto;
+        justify-items: center;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .copywrite{
+        grid-column: span 1;
+    }
+    .footer-general{
+        padding-top: 0;
+    }
+}
+@include media (md){
+/*nav*/
+#nav ul{
+    display: flex;
+}
+.menu-toggle i{
+    display: none;
+}
+/*mv*/
+
+.nosotros .misionVision .container{
+    grid-template: repeat(3, auto) / repeat(4, auto);
+    grid-template-areas: "mision mision vision vision" "valores valores objetivos objetivos" ". politicas politicas .";
+}  
+/*rombo*/
+.nosotros .elegirnos .box{
+    width: 300px;
+    height: 300px;
+}
+.nosotros .elegirnos .line1, .nosotros .elegirnos .line2{
+    width: 60%;
+    height: 4px;
+}
+.nosotros .elegirnos .text{
+    font-size: 15px;
+}
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.footer-logo{
+    padding: 2em;
+    text-align: center;
+    & h2{
+        font-size: 3em;
+    }
+    & h5{
+        font-size: 1.5em;
+    }
+}
+.footer-general{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: wrap column;
+    padding: 2em;
+
+}
+.footer-datos{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap column;
+}
+.footer-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    & li{
+        height:40px;
+        width:40px;
+        background:#34393C;
+        border-radius: 50%;
+        margin: 0 15px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#fff;
+
+    }
+}
+.footer-social{
+    padding: 0;
+    margin: .4em 0;
+    width: 50%;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    & li{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color:white;
+        background: #34393C;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+}
+.copywrite{
+    grid-column: span 2;
+    text-align: center;
+    padding: 1em;
+    & a{
+        color:#01b1ea
+    }
+
+}
+
+}
+@include media(lg){
+    .nosotros .misionVision .container{
+		grid-template: repeat(3, auto) / repeat(4, auto);
+		grid-template-areas: "mision mision vision vision" "valores valores objetivos objetivos" ". politicas politicas .";
+	}  
+	/*rombo*/
+	.nosotros .elegirnos .box{
+		width: 300px;
+		height: 300px;
+	}
+	.nosotros .elegirnos .line1, .nosotros .elegirnos .line2{
+		width: 60%;
+		height: 4px;
+	}
+	.nosotros .elegirnos .text{
+		font-size: 15px;
+    }
+    .contactanos .container{	
+        grid-template: auto / repeat(2, auto);
+    }
+}
+@media ( min-width : 992px ) {  
+	/*mv*/
+	.nosotros .misionVision .container{
+		grid-template: repeat(3, auto) / repeat(4, auto);
+		grid-template-areas: "mision mision vision vision" "valores valores objetivos objetivos" ". politicas politicas .";
+	}  
+	/*rombo*/
+	.nosotros .elegirnos .box{
+		width: 300px;
+		height: 300px;
+	}
+	.nosotros .elegirnos .line1, .nosotros .elegirnos .line2{
+		width: 60%;
+		height: 4px;
+	}
+	.nosotros .elegirnos .text{
+		font-size: 15px;
+	}
+}
+/* Extra Large - xl */
+@media ( min-width : 1200px ) { 
+	/*rombo*/
+	.nosotros .elegirnos .box{
+		width: 350px;
+		height: 350px;
+	}
+	.nosotros .elegirnos .text{
+		font-size: 16px;
+	}
+}
+/* Extra Large - xl */
+@media ( min-width : 1300px ) {  
+	/*rombo*/
+	.nosotros .elegirnos .box{
+		width: 400px;
+		height: 400px;
+	}
+	/*mv*/
+	.nosotros .misionVision .container{
+		grid-template: repeat(2, auto) / repeat(6, auto);
+		grid-template-areas: "mision mision vision vision valores valores" ". objetivos objetivos politicas politicas .";
+	}
+}

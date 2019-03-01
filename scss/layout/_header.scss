@@ -1,10 +1,10 @@
 /* -------------------------------*\
 |              HEADER               |
 \*---------------------------------*/
-
-
-.header{
-    grid-area:header;
-    display: grid;
-    grid-template-rows:  100vh auto;
+header nav{
+	width: 100%;
+	background-color: rgba(0, 0, 0, .3);
+	position: fixed;
+	transition: all .5s ease;
+	z-index: 2;
 }

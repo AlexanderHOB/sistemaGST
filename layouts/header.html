@@ -1,32 +1,67 @@
-<header class="header">
-    
-    <section class="portada">
+<!--HEADER-->
+<header>
+  <nav id="nav">
+    <div class="container">
+      <a href="#" class="logo">GST</a>
+      <ul>
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros <i class="fas fa-sort-down"></i></a>
+          <ul id="dropdown">
+            <li><a href="#quienesSomos">¿Quienes Somos?</a></li>
+            <li><a href="#misionVision">Misión Visión</a></li>
+            <li><a href="#porqueElegirnos">¿Por qué elegirnós?</a></li>
+          </ul>
+        </li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contactanos">Contactanos</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="menu-toggle"><i class="fas fa-bars" data-pushbar-target="pushbar-menu"></i></div>
+  <nav id="push" data-pushbar-id="pushbar-menu" class="pushbar from_left pushbar-menu">
+    <div class="container">
+      <div class="navTitle">
+        <a href="#" class="logo">GST</a>
+        <i class="fas fa-times fa-1x x" data-pushbar-close></i>
+      </div>
+      <ul>
+        <li><a href="#inicio" class="push-li activePush">Inicio</a></li>
+        <li><a href="#!" class="push-li">Nosotros <i class="fas fa-sort-down"></i></a>
+          <ul id="dropdown">
+            <li><a href="#quienesSomos">¿Quienes Somos?</a></li>
+            <li><a href="#misionVision">Misión Visión</a></li>
+            <li><a href="#porqueElegirnos">¿Por qué elegirnós?</a></li>
+          </ul>
+        </li>
+        <li><a href="#servicios" class="push-li">Servicios</a></li>
+        <li><a href="#contactanos" class="push-li">Contactanos</a></li>
+      </ul>
+    </div>
+  </nav>
+    <section id="inicio" class="inicio">
+      <div class="slider">
+        <img class="slide active" src="img/imagenes-carrusel/c1-72pp-min.png" alt="slider" />
+        <img class="slide" src="img/imagenes-carrusel/c2-72pp-min.png" alt="slider" />
+        <img class="slide" src="img/imagenes-carrusel/c1-72pp-min.png" alt="slider" />
+        <img class="slide" src="img/imagenes-carrusel/c2-72pp-min.png" alt="slider" />
+      </div>
+      <div class="slider-nav">
         <ul>
-            <li>
-                <input type="radio" class="radio" name="radio" checked>
-                <div class="slide">
-                    <img src="images/carrusel-1.png" alt="Portada-Sistema-GST">
-                </div>
-            </li>
-            <li>
-                <input type="radio" class="radio" name="radio">
-                <div class="slide">
-                    <img src="images/carrusel-2.png" alt="Portada-Sistema-GST">
-                </div>
-            </li>
+          <li class="arrow">
+            <a class="previous">
+              <span>
+                <i class="fas fa-angle-left"></i>
+              </span>
+            </a>
+          </li>
+          <li class="arrow">
+            <a class="next">
+              <span>
+                <i class="fas fa-angle-right"></i>
+              </span>
+            </a>
+          </li>
         </ul>
+      </div>
     </section>
-    <nav class="nav">
-        <div class="logo">
-            <img src="images/b-logotipo.svg" alt="Logo">
-        </div>
-        <div class="features">
-            <ul class="features-item">
-                <a href="#"><li>Inicio</li></a>
-                <a href="#"><li>Nosotros</li></a>
-                <a href="#"><li>Servicios</li></a>
-                <a href="#"><li>Contáctanos</li></a>
-            </ul>
-        </div>
-    </nav>
-</header>
+  </header>
