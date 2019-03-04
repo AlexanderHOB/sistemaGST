@@ -1,0 +1,44 @@
+/* -------------------------------*\
+|              COLORES              |
+\*---------------------------------*/
+
+$color-background:#181a1e;
+$color-nav:rgba(248,248,248,.9);
+$color-footer:#232323;
+$color-word-nav:#ACACAC;
+$color-title:#C96195;
+// $color-logo:#3E3E3E;
+$color-word-footer:#FEFEFE;
+$color-text:#999493;
+$color-links:#BCB5B3;
+$color-title-article:#DCDCDC;
+$color-text-article:#797979;
+$color-article-background:#F8F8F8;
+$color-article-background-titulo:#646464;
+// Texturas
+$color-alert: rgb(252,228,207); 
+$color-error: rgb(218,79,73);
+$color-info:   rgb(66, 184, 221);
+$color-success: rgb(91,183,91);
+//animaciones
+$color-s:#ce001a;
+$color-g:#69995d;
+$color-t:#083d77;
+$color-background-servicios:#e0deee;
+$font-size-servicio:5em;
+$font-size-servicioTitle:2em;
+$font-family-service:'Lobster', cursive;
+//tipografias
+$base-font:'Source Sans Pro', sans-serif;
+$title-font: 'Satisfy', cursive;
+$base-font-size:1.3em;
+$title-font-size:3em;
+//font-size
+
+
+
+// mediqueries:
+$breakpoint-xs: 360px;
+$breakpoint-sm: 650px;
+$breakpoint-md: 900px;
+$breakpoint-lg: 1360px;

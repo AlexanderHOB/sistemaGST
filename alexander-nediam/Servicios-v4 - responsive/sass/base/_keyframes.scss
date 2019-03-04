@@ -1,0 +1,95 @@
+// Animation Servicios
+@keyframes animate{
+	0%{
+		opacity: 0;
+		transform: rotate(45deg) translate(-10px, -10px);
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		transform: rotate(45deg) translate(10px, 10px);
+	}
+}
+@keyframes feature-g-in{
+    from{
+        background-color: $color-background-servicios;
+        color:$color-g;
+        width:300px;
+    }
+    to{
+        color:$color-background-servicios;
+        background-color: $color-g;
+        width:900px;
+    }
+}
+@keyframes feature-g-out{
+    from{
+        color:$color-background-servicios;
+        background-color: $color-g;
+        width:900px;
+        
+    }
+    to{
+        background-color: $color-background-servicios;
+        color:$color-g;
+        width:300px;
+    }
+}
+@keyframes feature-s-in{
+    from{
+        background-color: $color-background-servicios;
+        color:$color-s;
+        width:300px;
+        
+    }
+    to{
+        color:$color-background-servicios;
+        background-color: $color-s;
+        width:900px;
+        transform: translateX(-300px);
+    }
+}
+@keyframes feature-s-out{
+    from{
+        color:$color-background-servicios;
+        background-color: $color-s;
+        width:900px;
+        transform: translateX(-300px);
+        
+    }
+    to{
+        background-color: $color-background-servicios;
+        color:$color-s;
+        width:300px;
+    }
+}
+@keyframes feature-t-in{
+    from{
+        background-color: $color-background-servicios;
+        color:$color-t;
+        width:300px;
+    }
+    to{
+        color:$color-background-servicios;
+        background-color: $color-t;
+        width:900px;
+        transform: translateX(-600px);
+
+    }
+}
+@keyframes feature-t-out{
+    from{
+        color:$color-background-servicios;
+        background-color: $color-t;
+        width:900px;
+        transform: translateX(-600px);
+        
+    }
+    to{
+        background-color: $color-background-servicios;
+        color:$color-t;
+        width:300px;
+    }
+}

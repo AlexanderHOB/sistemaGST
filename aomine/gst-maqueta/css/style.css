@@ -1,0 +1,429 @@
+/*GENERALES*/
+*{
+	margin: 0;
+	scroll-behavior: smooth;
+}
+body{
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+a{
+	text-decoration: none;
+}
+h4{
+	color: #fff;
+	font-size: 50px;
+	text-align: center;
+	padding-top: 30px;
+}
+.titleNosotros{
+	padding-top: 30px;
+}
+/*scroll*/
+body::-webkit-scrollbar{
+	width: 10px;
+	height: 10px;
+}
+body::-webkit-scrollbar-track{
+	background-color: rgba(0, 0, 0, .1); 
+}
+body::-webkit-scrollbar-thumb{
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, .3);
+}
+/*ancla*/
+.ancla{
+	color: transparent;
+	background-color: transparent;	
+	font-size: 0;
+	transform: translateY(-40px);
+}
+/*NAV*/
+header nav{
+	width: 100%;
+	background-color: rgba(0, 0, 0, .3);
+	position: fixed;
+	transition: all .5s ease;
+	z-index: 2;
+}
+.bg-blue{
+	background-color: #083d77;
+	box-shadow:0 0 .5em RGBA(0,0,0,.5);
+}
+#nav .container{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#nav .logo{
+	color: #fff;
+	font-size: 32px;
+	padding: 5px 0;
+}
+#nav ul{
+	display: flex;
+}
+#nav ul li{
+	list-style: none;
+}
+#nav ul li a{
+	font-size: 16px;
+	display: inline-block;
+	margin: 0 10px;
+	color: rgba(255, 255, 255, .5);
+	transition: all .5s ease;
+}
+#nav ul li .active{
+	color: #fff;
+	position: relative;
+}
+#nav ul li .active:before{
+	content: '\f107';
+	font-family:"Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 12px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -150%);
+}
+#nav ul li:nth-of-type(2) a{
+	display: flex;
+}
+#nav ul li:nth-of-type(2) a i{
+	margin-left: 4px;
+	margin-top: 2px;
+	align-self: center;
+}
+/*SECTIONS*/
+.servicios, .contactanos, footer{
+	height: 100vh;
+	width: 100%;
+}
+/*INICIO*/
+.inicio {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.inicio img {
+	width: 100%;
+	display: none;
+	filter: brightness(.8);
+}
+.inicio img.active {
+	display: block;
+	animation: fadeImg .8s, animateSlide 20s linear infinite;;
+}
+.inicio .slider-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	overflow: hidden;
+}
+.inicio .slider-nav ul li {
+	text-align: center;
+}
+.inicio a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 2.5rem;
+}
+.inicio a span i {
+	display: block;
+	cursor: pointer;
+	outline: 0;
+	transform: translateX(0px);
+	transition: transform 0.3s ease;
+}
+.inicio a.previous span:hover i {
+	transform: translateX(-10px) scale(1.2);
+}
+.inicio a.next span:hover i {
+	transform: translateX(10px) scale(1.2);
+}
+.inicio .slider-nav .arrow {
+	flex: 0 0 85%;
+}
+@keyframes fadeImg {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes animateSlide{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+/*INTRODUCCIÓN*/
+.nosotros .introduccion{
+	background-color: #394648;
+	height: 500px;
+	width: 100%;
+}
+/*Mision Vision*/
+.nosotros .misionVision{
+	background-color: #69995d;
+	width: 100%;
+	height: 100%;.
+}
+.nosotros .misionVision .container{
+	width: 100%;
+	margin: 0 auto;
+}
+.nosotros .misionVision .card1{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	justify-items: center;
+	grid-gap: 30px;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+.nosotros .misionVision .card2{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	justify-items: center;
+	grid-gap: 30px;
+	margin-bottom: 70px;
+}
+/* cardMV  */
+.nosotros .misionVision .cardMV{
+	width: 350px;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.3s;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nosotros .misionVision .cardMV:nth-child(1){
+	background: #4caf50;
+}
+.nosotros .misionVision .cardMV:nth-child(2){
+	background: #f54967;
+}
+.nosotros .misionVision .cardMV:nth-child(3){
+	background: #328fa5;
+}
+.nosotros .misionVision .cardMV object{
+	width: 30%;
+	transition: all 0.5s;
+	display: block;
+}
+.nosotros .misionVision .cardMV:hover object{
+	transform: scale(1.6) rotate(0deg);
+}
+.nosotros .misionVision .cardMV:hover{
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.nosotros .misionVision .cardMV .contents{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	width: 80%;
+	color: #fff;
+	z-index: 2;
+	transition: all 0.6s cubic-bezier(1,0,0,1);
+	border: 1px solid #fff;
+	background: #000;
+	padding: 6px;
+}
+.nosotros .misionVision .cardMV .contents h3{
+	text-align: center;
+	padding-bottom: 4px;
+	font-size: 14px;
+}
+.nosotros .misionVision .cardMV .contents p{
+	font-size: 12px;
+}
+.nosotros .misionVision .cardMV .contents ul li{
+	font-size: 12px;
+}
+.nosotros .misionVision .cardMV:hover .contents{
+	transform: translate(-50%, -50%) scale(1);
+}
+.nosotros .misionVision .cardMV:before,
+.nosotros .misionVision .cardMV:after{
+	content: '';
+	width: 350px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	opacity: 0.6;
+	transition: all 0.6s cubic-bezier(1,0,0,1);
+	border: 2.5px solid #fff;
+	z-index: 1;
+}
+.nosotros .misionVision .cardMV:before{
+	transform: rotate(45deg) translateY(-400px) translateX(0);
+}
+.nosotros .misionVision .cardMV:after{
+	transform: rotate(45deg) translateY(400px) translateX(-60px);
+}
+.nosotros .misionVision .cardMV:hover:before{
+	transform: rotate(45deg) translateY(-195px) translateX(0);
+}
+.nosotros .misionVision .cardMV:hover:after{
+	transform: rotate(45deg) translateY(120px) translateX(-60px);
+}
+/*Porque elegirnos*/
+.nosotros .elegirnos{
+	background-color: #181a1e;
+	height: 100%;
+}
+.nosotros .elegirnos .rombo{
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+.nosotros .elegirnos .rombo *{
+	transition: all .5s ease;
+	border-radius: 20px; 
+	cursor: pointer;
+}
+.nosotros .elegirnos .line1, .nosotros .elegirnos .line2{
+	width: 60%;
+	height: 4px;
+	background-color: #181a1e;
+}
+.nosotros .elegirnos .box{
+	width: 350px;
+	height: 350px;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	grid-gap: 5px;
+	transform: rotate(45deg);
+	overflow: hidden;
+	position: relative;
+}
+.nosotros .elegirnos .wall{
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: absolute; 
+	background-color: transparent;
+	z-index: 4;
+}
+.nosotros .elegirnos .text{
+	position: absolute;
+	width: 80%;
+	z-index: 3;
+	left: 50%;
+	top: 50%; 
+	transform: translate(-50%, -50%) rotate(-45deg);
+	text-align: center;
+}
+.nosotros .elegirnos .text h3{
+	margin: 0;
+	color: #F4F4F8;
+	transition: all .2s ease;
+	opacity: 0;
+	display: none;
+	padding-bottom: 4px;
+}
+.nosotros .elegirnos .text p{
+	margin: 0;
+	color: rgba(255, 255, 255, .6);
+	transition: all .2s ease;
+	opacity: 0;
+	display: none;
+}
+.nosotros .elegirnos .text .text3{
+	color: #343a40;
+}
+.box1, .box2, .box3, .box4{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nosotros .elegirnos .box1{
+	background-color: #C3423F;
+}
+.nosotros .elegirnos .box2{
+	background-color: #9BC53D;
+}
+.nosotros .elegirnos .box3{
+	background-color: #5BC0EB;
+}
+.nosotros .elegirnos .box4{
+	background-color: #FDE74C;
+}
+.nosotros .elegirnos .box .imgRombo{
+	width: 100px;
+	height: 100px;
+	transition: all .5s ease;
+	transform: rotate(-45deg);
+}
+.nosotros .elegirnos .effect{ 
+	transform: scale(3.5);
+}
+.nosotros .elegirnos .index{ 
+	z-index: 2;
+}
+.nosotros .elegirnos .text .block, .nosotros .elegirnos .block{
+	display: block;
+}
+.nosotros .elegirnos .text .show{
+	opacity: 1;  
+}
+.nosotros .elegirnos .box .vanished{
+	opacity: 0;
+	transform: rotate(180deg) scale(.1);
+}
+.nosotros .elegirnos .bg1{
+	background-color: #C3423F;
+}
+.nosotros .elegirnos .bg2{
+	background-color: #9BC53D;
+}
+.nosotros .elegirnos .bg3{
+	background-color: #5BC0EB;
+}
+.nosotros .elegirnos .bg4{
+	background-color: #FDE74C;
+}
+/*SERVICIOS*/
+.servicios{
+	background-color: #e3dfff;
+}
+.servicios h4{
+	color: #262626;
+}
+/*CONTACTANOS*/
+.contactanos{
+	background-color: #012a36;
+}
+/*FOOTER*/
+footer{
+	height: 200px;
+	background-color: #181a1e;
+
+}

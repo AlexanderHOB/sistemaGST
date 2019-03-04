@@ -1,0 +1,25 @@
+// Librerias, Settings y Variables
+@import 'lib/variables';
+@import 'lib/functions';
+@import 'lib/placeholders';
+@import 'lib/mixins';
+
+//Elementos Base
+@import 'base/reset';
+@import 'base/keyframes';
+@import 'base/typography';
+
+
+//@componentes
+@import 'components/media';
+
+// Layouts
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/portada';
+@import 'layout/main';
+@import 'layout/aside';
+@import 'layout/forms';
+@import 'layout/footer';
+

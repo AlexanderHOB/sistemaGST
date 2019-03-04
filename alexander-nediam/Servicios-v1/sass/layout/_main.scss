@@ -1,0 +1,119 @@
+.servicios{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    font-family: $font-family-service;
+    overflow: hidden;
+}
+%servicio{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3dfff;
+    font-size:$font-size-servicio;
+    border:1px solid $color-background;
+    width:100%;
+    transition: all 1s ease; 
+    z-index: 2;
+    position: relative;
+
+}
+%servicio:after{
+    content:'';
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+}
+.servicio-title{
+    text-align: center;
+    background-color: #e3dfff;
+    font-size:$font-size-servicio;
+    border:1px solid $color-background;
+    width:100%;
+    grid-column: span 3;
+    font-size:$font-size-servicioTitle;
+}
+.servicio-g{
+    @extend %servicio;
+    color:$color-g;
+    & h4{
+        padding:0 0 0 230px;
+    }
+}
+.servicio-g:after{
+    @extend %servicio:after;
+}
+.servicio-g:hover{
+    color:$color-background-servicios;
+    background-color: $color-g;
+    width:900px;
+}
+.servicio-s{
+    @extend %servicio;
+    color:$color-s;
+    grid-template-columns: 1fr 1fr 1fr;
+    & h4{
+        text-align: center;
+        padding:0;
+    }
+}
+.servicio-s:hover{
+    color:$color-background-servicios;
+    background-color: $color-s;
+    width:900px;
+    transform: translateX(-300px);
+}
+.servicio-s:after{
+    @extend %servicio:after;
+}
+.servicio-t{
+    @extend %servicio;
+    padding-right: 40px;
+    color:$color-t;
+    grid-template-columns: 3fr 1fr;
+    & h4{
+        padding:0 200px 0 0;
+    }
+}
+.servicio-t:hover{
+    color:$color-background-servicios;
+    transform:translateX(-600px);
+    background-color: $color-t;
+    width: 900px;
+}
+.servicio-t:after{
+    @extend %servicio:after;
+}
+.index{
+    z-index: 100 !important;
+}
+%features{
+    visibility: hidden;
+    // display: none;
+    text-align: center;
+    font-size:map-get($map: $font-size, $key: big );
+    
+    & ul{
+        list-style:none;
+    }
+}
+.features-g{
+    @extend %features;
+}
+.features-s{
+    @extend %features;
+}
+.features-t{
+    @extend %features;
+}
+.show{
+    visibility: visible;
+    // display: block;
+}
+// .hidden{
+//     // visibility: hidden;
+//     display: none;
+// }

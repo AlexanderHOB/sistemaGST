@@ -1,0 +1,333 @@
+@include media(sm){
+    @keyframes feature-g-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-g;
+            width:200px;
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-g;
+            width:600px;
+        }
+    }
+    @keyframes feature-g-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-g;
+            width:600px;
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-g;
+            width:200px;
+        }
+    }
+    @keyframes feature-s-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-s;
+            width:200px;
+            
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-s;
+            width:600px;
+            transform: translateX(-200px);
+        }
+    }
+    @keyframes feature-s-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-s;
+            width:600px;
+            transform: translateX(-200px);
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-s;
+            width:200px;
+        }
+    }
+    @keyframes feature-t-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-t;
+            width:200px;
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-t;
+            width:600px;
+            transform: translateX(-400px);
+    
+        }
+    }
+    @keyframes feature-t-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-t;
+            width:600px;
+            transform: translateX(-400px);
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-t;
+            width:200px;
+        }
+    }
+
+    .servicios{
+        grid-template-columns: repeat(3,200px) ;
+
+    }
+    .servicio-title{
+        width:600px ;
+    }
+    .servicio-g{
+        & h4{
+            left:80px ;
+        }
+    }
+    .servicio-t{
+        & h4{
+            right:80px ;
+        }
+    }
+
+}
+
+@include media (xs){
+    .servicios{
+        display: grid;
+        grid-template-columns: 70%;
+        grid-auto-rows:200px;
+        justify-content: center;
+        position: relative;
+        width:100%;
+    }
+    .servicio-title{
+        width:70%;
+        grid-column: span 3;
+        font-size:$font-size-servicioTitle;
+    }
+    %servicio{
+        display:grid;
+        align-items: center;
+        justify-content: center;
+        transition: all 1s ease; 
+        height:200px;
+        
+
+    }
+    .servicio-g{
+        grid-template-columns: 1fr;
+        & div{
+            display: flex;
+            justify-content: center;
+        }
+        & h4{
+            text-align: center;
+            margin: 0;
+            line-height: 200px;
+            left:0;
+            position: relative;
+        }
+    }
+    .servicio-s{
+        grid-template-columns: 1fr;
+        
+        & h4{
+            margin: 0;
+            text-align: center;
+            line-height: 150px;
+            grid-row:1;
+
+        }
+    }
+    .servicio-t{
+        grid-template-columns: 1fr;
+        & h4{
+            text-align: center;
+            margin: 0;
+            line-height: 150px;
+            right:0;
+            position: relative;
+            grid-row:1;
+        }
+    }
+    %flecha{
+        span{
+            width: 10px;
+            height: 10px;
+        }
+    }
+    .flecha{
+        bottom:-5%;
+        left: 50%;
+        transform:rotate(0deg);
+
+        span:nth-of-type(2){
+            display: none;
+        }
+        &.rotate{
+            transform: rotate(-180deg) translateY(+40px);
+        }
+    }
+    .flecha-s{
+        bottom:-5%;
+        right: 50%;
+        transform:rotate(0deg);
+        &.rotate{
+            transform: rotate(-180deg) translateY(+40px);
+        }
+    }
+    .flecha-t{
+        left: 50%;
+        transform:rotate(180deg);
+        top:-5%;
+
+    }
+    .features-g{
+        display: flex;
+        flex-flow:wrap column;
+        font-size:.3em;
+        & div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        & img{
+            max-width: 40%;
+            max-height: 30%;
+        }
+        
+    }
+    .features-s{
+        font-size:.3em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        & img{
+            width: 30%;
+            height: 30%;
+        }
+    }
+    .features-t{
+        display: flex;
+        flex-flow:wrap column;
+        font-size:.3em;
+        & div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        & img{
+            max-width: 40%;
+            max-height: 30%;
+        }
+    }
+    @keyframes animate{
+        0%{
+            opacity: 0;
+            transform: rotate(45deg) translate(-10px, -10px);
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+    }
+    @keyframes feature-g-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-g;
+            height: 200px;
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-g;
+            height:600px;
+        }
+    }
+    @keyframes feature-g-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-g;
+            height:600px;
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-g;
+            height: 200px;
+        }
+    }
+    @keyframes feature-s-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-s;
+            height: 200px;
+            
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-s;
+            height: 600px;
+            transform: translateY(-200px);
+        }
+    }
+    @keyframes feature-s-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-s;
+            height: 600px;
+            transform: translateY(-200px);
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-s;
+            height: 200px;
+        }
+    }
+    @keyframes feature-t-in{
+        from{
+            background-color: $color-background-servicios;
+            color:$color-t;
+            height: 200px;
+        }
+        to{
+            color:$color-background-servicios;
+            background-color: $color-t;
+            height: 600px;
+            transform: translateY(-400px);
+    
+        }
+    }
+    @keyframes feature-t-out{
+        from{
+            color:$color-background-servicios;
+            background-color: $color-t;
+            height: 600px;
+            transform: translateY(-400px);
+            
+        }
+        to{
+            background-color: $color-background-servicios;
+            color:$color-t;
+            height: 200px;
+        }
+    }
+
+// .rotate{
+//     transform: rotate(90deg) translateX(+40px);
+    
+// }
+}

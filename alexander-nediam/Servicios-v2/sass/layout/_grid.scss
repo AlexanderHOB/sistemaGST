@@ -1,0 +1,12 @@
+/* -------------------------------*\
+|              GRID                 |
+\*---------------------------------*/
+
+body{
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    justify-content: center;
+    background: $color-background;
+    height: 100vh;
+}

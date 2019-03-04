@@ -1,0 +1,39 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #262626;
+}
+.brand{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,  -50%);
+}
+svg#marca{
+  display: block;
+  transform: scale(2.5);
+}
+.st0{fill:#F691F1;}
+.st1{fill:#F791F1;}
+
+.st2{fill:#E5CF30;}
+.st3{fill:#1B784C;}
+/*st4 fill , st5 stroke fot logotipo_2_*/
+.st4{fill:none;}
+.st5{fill:none ;stroke:red;}
+
+g#isotipo_2_ > path{
+  stroke-dasharray:815  ;
+  /*animation: animate 6s cubic-bezier(.24,.44,.57,.19);*/
+  animation: animate 3s linear;
+}
+@keyframes animate {
+  0%, 30%{
+    opacity: 0;
+    stroke-dashoffset:815 ;
+  }
+  50%, {
+    opacity: 0.5;
+    stroke-dashoffset:815 ;
+  }
+}

@@ -1,0 +1,104 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: -webkit-linear-gradient(#320e3b 0%, #f69f1f 100%);
+  width: 100%;
+  height: 100vh;
+}
+.brand{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,  -50%);
+}
+svg#marca{
+  display: block;
+  transform: scale(2);
+}
+.st0{fill:none;stroke:#none;stroke-width:2;stroke-miterlimit:10;}
+.st1{fill:#fff;stroke:#fff;}
+.st2{fill:#fff;stroke:#fff;}
+.st3{fill:#fff;stroke:#fff;stroke-miterlimit:10;}
+/*animacion del isotipo_2_*/
+g#isotipo_2_ > path{
+  stroke-dasharray:815  ;
+  animation: animate 6s cubic-bezier(.24,.44,.57,.19) infinite;
+}
+@keyframes animate {
+  0%{
+    fill:#fff;
+    opacity:1;
+    stroke-dashoffset:815 ;
+  }
+  30% {
+    fill:none;
+    opacity: 0.8;
+    stroke-dashoffset:815 ;
+  }
+  80%{
+    opacity: 1;
+    fill:rgba(255, 255, 255, 0) ;
+  }
+    90%,100%{
+    opacity:1;
+    fill: rgba(255, 255, 255, 1);
+    stroke-dashoffset:0;
+  }
+}
+/*animacion del logotipo_1_1_*/
+g#logotipo_1_1_ > path{
+  stroke-dasharray:400  ;
+  animation: animates 6s cubic-bezier(0,.02,1,1) infinite forwards;
+}
+@keyframes animates {
+  0%{
+    fill:#fff;
+    opacity:1;
+    stroke-dashoffset:400 ;
+  }
+  30% {
+    fill:none;
+    opacity: 0.8;
+    stroke-dashoffset:400 ;
+  }
+  80%{
+    opacity: 1;
+    fill:rgba(255, 255, 255, 0) ;
+  }
+    95%,100%{
+    opacity:1;
+    fill: rgba(255, 255, 255, 1);
+    stroke-dashoffset:0;
+  }
+}
+/*animacion del logotipo_2_1_*/
+g#logotipo_2_1_ > path{
+  stroke-dasharray:400  ;
+  animation: animatess 6s cubic-bezier(0,.02,1,1) infinite forwards;
+}
+@keyframes animatess {
+  0%{
+    fill:#fff;
+    opacity:1;
+    stroke-dashoffset:400 ;
+  }
+  30% {
+    fill:none;
+    opacity: 0.8;
+    stroke-dashoffset:400 ;
+  }
+  80%{
+    opacity: 1;
+    fill:rgba(255, 255, 255, 0) ;
+  }
+    95%,100%{
+    opacity:1;
+    fill: rgba(255, 255, 255, 1);
+    stroke-dashoffset:0;
+  }
+}
+/*oculando la pinche flecha que
+ no quiere cambiar su color >:x  */
+g#flecha_2_ > path,polygon{
+  visibility: hidden;
+}
